@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DIKWP-VITA Mesh OS · 分布式生命力驾驶舱</title>
+<style>
+:root{--bg:#07111e;--panel:#0e1f33;--panel2:#122943;--line:#274a69;--text:#e8f2fb;--muted:#98b3c9;--accent:#4fd1c5;--accent2:#8ab4ff;--warn:#ffcc66;--bad:#ff7b86;--good:#6fe6a6;--shadow:0 18px 50px rgba(0,0,0,.28)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#12304e 0,#07111e 38%,#040a11 100%);color:var(--text);font-family:Inter,"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;min-height:100vh}
+a{color:var(--accent2)}
+.wrap{max-width:1280px;margin:auto;padding:28px}
+.hero{border:1px solid var(--line);background:linear-gradient(145deg,rgba(18,48,78,.92),rgba(7,17,30,.94));border-radius:22px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:-120px;top:-150px;background:radial-gradient(circle,rgba(79,209,197,.32),transparent 68%)}
+.eyebrow{letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;font-size:12px}.hero h1{margin:8px 0 10px;font-size:clamp(30px,5vw,58px);line-height:1.05}.hero p{max-width:870px;color:#c8d8e7;font-size:17px;line-height:1.8}.tagrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.tag{border:1px solid #376486;background:rgba(5,17,29,.5);padding:7px 10px;border-radius:999px;color:#bcd5e8;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:16px}.card{background:linear-gradient(180deg,rgba(14,31,51,.96),rgba(9,22,37,.96));border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}.span4{grid-column:span 4}.span5{grid-column:span 5}.span6{grid-column:span 6}.span7{grid-column:span 7}.span8{grid-column:span 8}.span12{grid-column:span 12}
+.card h2,.card h3{margin:0 0 12px}.muted{color:var(--muted);line-height:1.65}.big{font-size:48px;font-weight:800;line-height:1}.stage{font-size:16px;color:var(--accent);font-weight:700;margin-top:8px}.bar{height:10px;background:#07121f;border-radius:999px;overflow:hidden;border:1px solid #203b54}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:999px}.metric{display:grid;grid-template-columns:110px 1fr 48px;gap:10px;align-items:center;margin:11px 0}.metric b{font-size:13px}.metric em{font-style:normal;text-align:right;color:#cfe2f1;font-variant-numeric:tabular-nums}
+.btns{display:flex;gap:10px;flex-wrap:wrap}.btn{appearance:none;border:1px solid #3b6687;background:#16344f;color:#eaf6ff;padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer}.btn:hover{filter:brightness(1.12)}.btn.primary{background:linear-gradient(120deg,#0d857b,#2d6fd4);border:none}.btn.warn{background:#563f16;border-color:#86662a}.btn.danger{background:#4b1e28;border-color:#7d3141}.status{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:6px 10px;font-size:12px;border:1px solid #3c607c}.dot{width:8px;height:8px;border-radius:50%;background:var(--warn)}.status.ok .dot{background:var(--good)}.status.bad .dot{background:var(--bad)}
+.code{font-family:"Noto Sans Mono CJK SC",ui-monospace,monospace;background:#050c14;border:1px solid #233e56;border-radius:12px;padding:12px;overflow:auto;color:#bfe7dd;white-space:pre-wrap;font-size:12px;line-height:1.55}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{padding:10px;border-bottom:1px solid #203b54;text-align:left;vertical-align:top}.table th{color:#9bc5df}.pill{display:inline-block;border:1px solid #355e7d;background:#102a42;border-radius:999px;padding:4px 8px;font-size:11px;margin:2px}.notice{border-left:4px solid var(--warn);background:#2c2818;padding:12px;border-radius:10px;color:#f7e7b0}.goodbox{border-left:4px solid var(--good);background:#122b24;padding:12px;border-radius:10px}.formrow{display:grid;grid-template-columns:160px 1fr;gap:12px;align-items:center;margin:10px 0}.formrow input,.formrow select,.formrow textarea{width:100%;background:#071521;border:1px solid #2b506d;color:#e8f2fb;border-radius:10px;padding:10px}.formrow textarea{min-height:86px;resize:vertical}.log{max-height:240px;overflow:auto}.small{font-size:12px}.footer{color:#7895ac;text-align:center;padding:24px 0 6px}.localpulse{display:flex;align-items:center;gap:14px}.heart{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#58e1d2,#13556c 55%,#092131);box-shadow:0 0 0 8px rgba(79,209,197,.08),0 0 45px rgba(79,209,197,.28);font-size:28px;animation:pulse 2.4s infinite}@keyframes pulse{50%{transform:scale(1.05);box-shadow:0 0 0 14px rgba(79,209,197,.03),0 0 58px rgba(79,209,197,.42)}}
+@media(max-width:900px){.span4,.span5,.span6,.span7,.span8{grid-column:span 12}.wrap{padding:14px}.hero{padding:22px}.formrow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">DIKWP-VITA Mesh OS v1.0</div>
+    <h1>分布式生命力驾驶舱</h1>
+    <p>每次访问先激活一个本地生命节点；每次下载增加一个可传播种子；每次复现、反例、修复、引用和镜像，才把注意力转化为高质量的公共生命力。系统不把“访问量”冒充科学真实性，也不进行隐蔽追踪。</p>
+    <div class="tagrow"><span class="tag">D · 事件数据</span><span class="tag">I · 关系与语义</span><span class="tag">K · 可验证知识</span><span class="tag">W · 更新优先级</span><span class="tag">P · 目的宪章</span><span class="tag">R · 残余风险</span></div>
+  </section>
+
+  <div class="grid">
+    <section class="card span4">
+      <div class="localpulse"><div class="heart">∞</div><div><div class="muted small">本地生命力</div><div class="big" id="localCount">0</div><div class="stage" id="localStage">本地种子</div></div></div>
+      <p class="muted">页面每次打开都会增加本地计数，数据只保存在本浏览器。即使完全离线，也形成一个独立的“访问即激活”节点。</p>
+      <div class="btns"><button class="btn" id="resetLocal">重置本地节点</button><button class="btn" id="exportLocal">导出本地脉冲</button></div>
+    </section>
+
+    <section class="card span4">
+      <div class="muted small">公共生命力</div>
+      <div class="big" id="vitalityScore">12.0</div>
+      <div class="stage" id="lifeStage">L0 Seed / 种子</div>
+      <p class="muted" id="stateMeta">等待连接公共节点。</p>
+      <div class="status" id="netStatus"><span class="dot"></span><span>本地模式</span></div>
+    </section>
+
+    <section class="card span4">
+      <h3>公开脉冲授权</h3>
+      <p class="muted">默认不发送网络请求。授权后，每次访问向指定 collector 提交匿名、每日轮换、可限频的 PulsePacket；可随时撤回。</p>
+      <div class="formrow"><label>Collector</label><input id="collectorUrl" value="http://127.0.0.1:8787" /></div>
+      <div class="btns"><button class="btn primary" id="consentOn">贡献匿名脉冲</button><button class="btn danger" id="consentOff">撤回授权</button></div>
+      <div class="muted small" id="consentText"></div>
+    </section>
+
+    <section class="card span7">
+      <h2>八维生命闭合</h2>
+      <div id="metrics"></div>
+    </section>
+
+    <section class="card span5">
+      <h2>为什么访问不是生命本身</h2>
+      <div class="notice">访问和下载只提供低权重能量。独立复现、反例、修复、引用、镜像和非创始维护，才提高信息、信任、适应、繁殖与连续性。</div>
+      <table class="table" style="margin-top:12px">
+        <thead><tr><th>事件</th><th>主要作用</th><th>相对质量</th></tr></thead>
+        <tbody>
+          <tr><td>页面访问</td><td>能量、少量多样性</td><td>低</td></tr>
+          <tr><td>Release 下载</td><td>能量、传播</td><td>低—中</td></tr>
+          <tr><td>运行证明</td><td>复现、信任、知识</td><td>中—高</td></tr>
+          <tr><td>反例 / 失败</td><td>信息、纠错、适应</td><td>高</td></tr>
+          <tr><td>合并修复</td><td>适应、连续性</td><td>高</td></tr>
+          <tr><td>独立采用 / 引用</td><td>信任、繁殖</td><td>很高</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card span6">
+      <h2>一键运行证明</h2>
+      <p class="muted">在当前浏览器运行确定性哈希探针。它不是身份识别，也不采集文件；它证明“下载的代码在另一环境中确实运行过”。</p>
+      <div class="btns"><button class="btn primary" id="runProof">运行本地 proof</button><button class="btn" id="shareProof">运行并提交 proof</button></div>
+      <pre class="code" id="proofOut">尚未运行。</pre>
+    </section>
+
+    <section class="card span6">
+      <h2>一分钟语义营养</h2>
+      <p class="muted">访问者可以把注意力转化为一个用例、反例、修正或翻译线索。内容默认只保存在本地；点击提交后才发送。</p>
+      <div class="formrow"><label>类型</label><select id="nutrientType"><option value="use_case">使用场景</option><option value="contradiction">反例 / 冲突</option><option value="correction">错误修正</option><option value="translation">翻译</option></select></div>
+      <div class="formrow"><label>内容</label><textarea id="nutrientText" placeholder="描述可复现的现象、缺口或建议；不要填写个人敏感信息。"></textarea></div>
+      <div class="btns"><button class="btn" id="saveNutrient">本地保存</button><button class="btn primary" id="shareNutrient">提交公共营养</button></div>
+      <div class="muted small" id="nutrientStatus"></div>
+    </section>
+
+    <section class="card span7">
+      <h2>分布式生命谱系</h2>
+      <table class="table"><thead><tr><th>层级</th><th>机制</th><th>避免的问题</th></tr></thead><tbody>
+        <tr><td>本地节点</td><td>localStorage + 本地 JSONL</td><td>离线访问仍有生命史</td></tr>
+        <tr><td>公共节点</td><td>FastAPI + SQLite append-only ledger</td><td>把脉冲编译为可审计事件</td></tr>
+        <tr><td>镜像节点</td><td>事件集合并、event_id 去重</td><td>单点服务器死亡</td></tr>
+        <tr><td>谱系证明</td><td>Merkle root + 签名 PulsePacket</td><td>静默改写历史</td></tr>
+        <tr><td>进化机制</td><td>EvolutionProposal + PR + 差分测试</td><td>系统自批高影响修改</td></tr>
+      </tbody></table>
+    </section>
+
+    <section class="card span5">
+      <h2>段玉聪个性化研究基因组</h2>
+      <div id="genome"></div>
+      <p class="muted small">该基因组是公开研究方向的项目路由，不是本人心理画像，也不允许数字孪生冒充本人。</p>
+    </section>
+
+    <section class="card span12">
+      <h2>事件日志</h2>
+      <div class="log code" id="eventLog"></div>
+    </section>
+  </div>
+  <div class="footer">DIKWP-VITA Mesh · privacy-first · evidence-weighted · federated lineage</div>
+</div>
+<script>
+const dims = ['energy','information','reproduction','continuity','governance','diversity','adaptation','trust'];
+const labels = {energy:'能量',information:'信息营养',reproduction:'繁殖',continuity:'连续性',governance:'治理',diversity:'多样性',adaptation:'适应',trust:'信任'};
+const fallback = {vitality_score:12,life_stage:'L0 Seed / 种子',event_count:0,unique_nodes:0,merkle_root:'seed',dimensions:{energy:.12,information:.10,reproduction:.08,continuity:.15,governance:.58,diversity:.08,adaptation:.08,trust:.10},residual_risks:['尚未接入公共节点。']};
+let state = fallback;
+const $ = id => document.getElementById(id);
+function log(msg,obj){const line=`[${new Date().toLocaleTimeString()}] ${msg}${obj?'\n'+JSON.stringify(obj,null,2):''}`; $('eventLog').textContent=line+'\n\n'+$('eventLog').textContent;}
+function localId(){let id=localStorage.getItem('vita_install_id');if(!id){id=crypto.randomUUID?crypto.randomUUID():'node-'+Math.random().toString(16).slice(2);localStorage.setItem('vita_install_id',id)}return id}
+async function digest(text){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+async function dayToken(type){return digest(`${localId()}|${new Date().toISOString().slice(0,10)}|${type}`)}
+function localPulse(){let n=Number(localStorage.getItem('vita_local_access')||0)+1;localStorage.setItem('vita_local_access',n);$('localCount').textContent=n;$('localStage').textContent=n<5?'本地种子':n<20?'本地萌芽':n<100?'本地持续体':'本地长期谱系';return n}
+function renderState(s){state=s||fallback;$('vitalityScore').textContent=Number(state.vitality_score||0).toFixed(1);$('lifeStage').textContent=state.life_stage||'Unknown';$('stateMeta').textContent=`事件 ${state.event_count||0} · 节点 ${state.unique_nodes||0} · Merkle ${(state.merkle_root||'').slice(0,12)}…`;const m=$('metrics');m.innerHTML='';dims.forEach(k=>{const v=Number((state.dimensions||{})[k]||0);m.insertAdjacentHTML('beforeend',`<div class="metric"><b>${labels[k]}</b><div class="bar"><i style="width:${Math.round(v*100)}%"></i></div><em>${Math.round(v*100)}%</em></div>`)});}
+const genome=[['DIKWP 语义闭环',100],['PACT 目的合同与审计',95],['ALIVE 科研数字生命',90],['白盒评估与开放基准',88],['AgentMesh 分布式协作',82],['生命连续性研究',72],['文明与场景治理',68]];
+function renderGenome(){genome.forEach(([n,w])=>$('genome').insertAdjacentHTML('beforeend',`<span class="pill">${n} · ${w}</span>`))}
+function collector(){return $('collectorUrl').value.replace(/\/$/,'')}
+function setConsent(v){localStorage.setItem('vita_consent',v?'yes':'no');$('consentText').textContent=v?'已授权：访问将发送匿名、限频脉冲。':'未授权：仅保留本地生命力。';}
+async function sendPulse(type,payload={},count=1){const p={schema_version:'1.0',event_type:type,artifact_id:'DIKWP-VITA-MESH',artifact_version:'1.0.0',timestamp:new Date().toISOString(),node_id:'web-'+(await digest(localId()+'|'+new Date().toISOString().slice(0,10))).slice(0,16),day_token:await dayToken(type),count,consent_scope:'anonymous',payload,public_key:null,signature:null,event_id:null};const r=await fetch(collector()+'/v1/pulse',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)});if(!r.ok)throw new Error(await r.text());const j=await r.json();log(`公共脉冲 ${type}`,j);await refreshState();return j}
+async function refreshState(){try{const r=await fetch(collector()+'/v1/state',{cache:'no-store'});if(!r.ok)throw new Error('state '+r.status);renderState(await r.json());$('netStatus').className='status ok';$('netStatus').innerHTML='<span class="dot"></span><span>公共节点在线</span>';}catch(e){renderState(state);$('netStatus').className='status';$('netStatus').innerHTML='<span class="dot"></span><span>本地模式</span>';}}
+async function accessPulse(){if(localStorage.getItem('vita_consent')==='yes'){try{await sendPulse('page_access',{source:'dashboard',privacy:'daily-pseudonym'})}catch(e){log('访问脉冲发送失败',{error:String(e)})}}}
+async function runProof(share){let x='DIKWP-VITA-MESH-v1.0';for(let i=0;i<512;i++)x=await digest(x+'|'+i+'|'+[17,3,29,11,5,23,7,19,13][i%9]);const proof={algorithm:'browser-sha256-reference-v1',rounds:512,digest:x,proof_valid:true,platform:navigator.platform||'browser'};$('proofOut').textContent=JSON.stringify(proof,null,2);localStorage.setItem('vita_last_proof',JSON.stringify(proof));log('本地运行证明完成',proof);if(share)await sendPulse('run_proof',proof);}
+$('consentOn').onclick=async()=>{setConsent(true);try{await sendPulse('page_access',{source:'consent_activation'})}catch(e){log('授权已保存，但公共节点不可达',{error:String(e)})}};
+$('consentOff').onclick=()=>setConsent(false);
+$('resetLocal').onclick=()=>{if(confirm('仅清除当前浏览器的本地生命计数？')){localStorage.removeItem('vita_local_access');$('localCount').textContent='0';log('本地节点已重置')}};
+$('exportLocal').onclick=()=>{const data={install_id:localId(),local_access:Number(localStorage.getItem('vita_local_access')||0),last_proof:JSON.parse(localStorage.getItem('vita_last_proof')||'null'),nutrients:JSON.parse(localStorage.getItem('vita_nutrients')||'[]'),exported_at:new Date().toISOString()};const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download='dikwp-vita-local-node.json';a.click();URL.revokeObjectURL(a.href)};
+$('runProof').onclick=()=>runProof(false).catch(e=>log('proof 失败',{error:String(e)}));$('shareProof').onclick=()=>runProof(true).catch(e=>log('proof 提交失败',{error:String(e)}));
+$('saveNutrient').onclick=()=>{const item={type:$('nutrientType').value,text:$('nutrientText').value.trim(),at:new Date().toISOString()};if(!item.text)return;$('nutrientText').value='';const xs=JSON.parse(localStorage.getItem('vita_nutrients')||'[]');xs.push(item);localStorage.setItem('vita_nutrients',JSON.stringify(xs));$('nutrientStatus').textContent=`已本地保存 ${xs.length} 条语义营养。`;log('本地语义营养',item)};
+$('shareNutrient').onclick=async()=>{const text=$('nutrientText').value.trim();if(!text)return;$('nutrientText').value='';try{await sendPulse($('nutrientType').value==='contradiction'?'contradiction':'feedback',{nutrient_type:$('nutrientType').value,text:text.slice(0,2000)});$('nutrientStatus').textContent='已提交公共节点。'}catch(e){$('nutrientStatus').textContent='提交失败，建议先本地保存。';log('营养提交失败',{error:String(e)})}};
+localPulse();renderGenome();renderState(fallback);setConsent(localStorage.getItem('vita_consent')==='yes');refreshState();accessPulse();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>

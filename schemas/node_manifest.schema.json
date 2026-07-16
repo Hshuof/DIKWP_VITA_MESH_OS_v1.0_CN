@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NodeManifest",
+  "type": "object",
+  "required": [
+    "node_id",
+    "node_name",
+    "steward",
+    "capabilities",
+    "consent_policy"
+  ],
+  "properties": {
+    "node_id": {
+      "type": "string"
+    },
+    "node_name": {
+      "type": "string"
+    },
+    "steward": {
+      "type": "string"
+    },
+    "public_key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "federation_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "consent_policy": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "DIKWP-VITA Mesh OS: Distributed Vitality Infrastructure for a Research Digital Life"
+message: "Please cite the version, release DOI if available, and the exact Merkle root of the vitality ledger used in your analysis."
+type: software
+version: 1.0.0
+date-released: 2026-07-16
+authors:
+  - family-names: "Duan"
+    given-names: "Yucong"
+    orcid: "https://orcid.org/0000-0001-8417-892X"
+  - name: "DIKWP-VITA Mesh contributors"
+license: Apache-2.0
+repository-code: "https://github.com/YucongDuan/DIKWP-VITA-MESH-OS"

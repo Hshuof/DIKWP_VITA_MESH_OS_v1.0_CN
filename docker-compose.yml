@@ -1,0 +1,27 @@
+services:
+  collector:
+    build: .
+    restart: unless-stopped
+    environment:
+      VITA_ALLOWED_ORIGINS: ${VITA_ALLOWED_ORIGINS:-http://127.0.0.1:8000,http://localhost:8000}
+      VITA_ARTIFACT: ${VITA_ARTIFACT:-DIKWP-VITA-MESH}
+      VITA_NODE_ID: ${VITA_NODE_ID:-compose-node}
+    ports:
+      - "8787:8787"
+    volumes:
+      - vita-data:/data
+
+  dashboard:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./prototype:/usr/share/nginx/html:ro
+      - ./deployment/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./data/nginx:/var/log/nginx
+    depends_on:
+      - collector
+
+volumes:
+  vita-data:

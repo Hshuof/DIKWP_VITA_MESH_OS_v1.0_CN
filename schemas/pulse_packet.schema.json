@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dikwp.example/schemas/pulse_packet.schema.json",
+  "title": "PulsePacket",
+  "type": "object",
+  "required": [
+    "event_type",
+    "artifact_id",
+    "artifact_version",
+    "timestamp",
+    "node_id",
+    "count",
+    "consent_scope",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "page_access",
+        "release_download",
+        "clone",
+        "star",
+        "fork",
+        "run_proof",
+        "feedback",
+        "contradiction",
+        "issue_evidence",
+        "pr_merged",
+        "citation",
+        "mirror_heartbeat",
+        "maintainer_release",
+        "resource_contribution",
+        "translation",
+        "adoption"
+      ]
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "node_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "day_token": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "consent_scope": {
+      "enum": [
+        "local",
+        "anonymous",
+        "public",
+        "signed"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "public_key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "signature": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "event_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": false
+}

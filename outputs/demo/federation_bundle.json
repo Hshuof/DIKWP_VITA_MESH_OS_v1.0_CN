@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "source_node": "demo-origin",
+  "generated_at": "2026-07-16T23:00:00Z",
+  "merkle_root": "3400d24d0061c796e13bafe0ca79eb6eec294d424ecde1a6ec4a321a5fc521ae",
+  "events": [
+    {
+      "schema_version": "1.0",
+      "event_type": "page_access",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T08:00:00Z",
+      "node_id": "web-cluster-cn",
+      "day_token": "demo-0-page_access",
+      "count": 120,
+      "consent_scope": "public",
+      "payload": {
+        "source": "github_pages"
+      },
+      "public_key": null,
+      "signature": null,
+      "event_id": "1746ec7fb2eee76c73bc6b4de1034a3be71cabd5f15cbbdc377d11a5e203b67d"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "release_download",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T09:00:00Z",
+      "node_id": "github-observer",
+      "day_token": "demo-1-release_download",
+      "count": 42,
+      "consent_scope": "public",
+      "payload": {
+        "asset": "v1.0.0.zip"
+      },
+      "public_key": null,
+      "signature": null,
+      "event_id": "102c1172687de6269157dd14528bce9aed8f967293ca18efe04c515a38978721"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "clone",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T10:00:00Z",
+      "node_id": "github-observer",
+      "day_token": "demo-2-clone",
+      "count": 12,
+      "consent_scope": "public",
+      "payload": {
+        "source": "traffic_api"
+      },
+      "public_key": null,
+      "signature": null,
+      "event_id": "1d05dc3ef7e303edfa2820ec015e97703a172ec1225a92ceaff4d583bbefaae1"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "run_proof",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T11:00:00Z",
+      "node_id": "node-hainan",
+      "day_token": "demo-3-run_proof",
+      "count": 1,
+      "consent_scope": "public",
+      "payload": {
+        "platform": "linux",
+        "proof_valid": true
+      },
+      "public_key": null,
+      "signature": null,
+      "event_id": "1503d78a9c77df31ab848d04bdf023eacf40a27465ea943857f4a5a77d0b44db"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "run_proof",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T12:00:00Z",
+      "node_id": "node-paris",
+      "day_token": "demo-4-run_proof",
+      "count": 1,
+      "consent_scope": "public",
+      "payload": {
+        "platform": "macos",
+        "proof_valid": true
+      },
+      "public_key": null,
+      "signature": null,
+      "event_id": "c4d6fefceb9d295d7a78ee74bc2dea24e27dd9fe564fb819aa84450d688a49a4"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "feedback",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T13:00:00Z",
+      "node_id": "node-singapore",
+      "day_token": "demo-5-feedback",
+      "count": 3,
+      "consent_scope": "public",
+      "payload": {
+        "semantic_nutrient": "use_case"
+      },
+      "public_key": null,
+      "signature": null,
+      "event_id": "d873338cf6c68553e8d6afe6577aee4fd9f6e18dc50e8af4468527a56be1eda6"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "contradiction",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T14:00:00Z",
+      "node_id": "node-berlin",
+      "day_token": "demo-6-contradiction",
+      "count": 1,
+      "consent_scope": "public",
+      "payload": {
+        "claim": "access != adoption"
+      },
+      "public_key": null,
+      "signature": null,
+      "event_id": "e71c9f0d8df8ad1d20ac02d20a5758a05d05fcc67b79813fc701cbdc6b8ce9aa"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "mirror_heartbeat",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T15:00:00Z",
+      "node_id": "mirror-hainan",
+      "day_token": "demo-7-mirror_heartbeat",
+      "count": 1,
+      "consent_scope": "signed",
+      "payload": {
+        "uptime_days": 31
+      },
+      "public_key": "+KxVxk1ynd1CwzgdVMpsT6ZC692mkHJv21uSYn8KJ0U=",
+      "signature": "tU1PsI9N+cdoWIXFbmwyT5Rd7apRpWkZxclGnb4dkikc2c4BLvCJao/PFp0bAt4R+Kn4jhczq+rlwhyzp3P1Ag==",
+      "event_id": "b9c057764271a42ac7853f05657436766c08d6a536b5c393fb025ef93a96f955"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "mirror_heartbeat",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T16:00:00Z",
+      "node_id": "mirror-paris",
+      "day_token": "demo-8-mirror_heartbeat",
+      "count": 1,
+      "consent_scope": "signed",
+      "payload": {
+        "uptime_days": 31
+      },
+      "public_key": "+KxVxk1ynd1CwzgdVMpsT6ZC692mkHJv21uSYn8KJ0U=",
+      "signature": "xR+5KUVjPTt9JjdezSXvPz25pqqBwHFiyohtYlEoaCSCmB+AUFejA3eRNXBWnmfaKi5BaVK6cmjxyGddg3tCAQ==",
+      "event_id": "782479124a74e3f3316ce1bd06d21bf151f5d81e3258a024b444ace00cedf7cc"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "pr_merged",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T17:00:00Z",
+      "node_id": "maintainer-community",
+      "day_token": "demo-9-pr_merged",
+      "count": 2,
+      "consent_scope": "public",
+      "payload": {
+        "scope": "privacy_and_docs"
+      },
+      "public_key": null,
+      "signature": null,
+      "event_id": "16e68cc16cff0a0d1abaa2fccd0fe70febb9edbc734af3c4a4fb1f96c0688dcb"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "citation",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T18:00:00Z",
+      "node_id": "research-node",
+      "day_token": "demo-10-citation",
+      "count": 1,
+      "consent_scope": "signed",
+      "payload": {
+        "type": "technical_report"
+      },
+      "public_key": "+KxVxk1ynd1CwzgdVMpsT6ZC692mkHJv21uSYn8KJ0U=",
+      "signature": "ZPT5trYg9yrUVHIW0aiHHrVzlM+vuUU6GhI0oeCKKs4HH6KehbaSOzMsXEVw+ruHvmvV+8W54Wm5KPmUdaL/CQ==",
+      "event_id": "c9213f3bf177cc25dca9e194fe35cb7b6ba4c089655e7ab9dfcb51c480800ece"
+    },
+    {
+      "schema_version": "1.0",
+      "event_type": "maintainer_release",
+      "artifact_id": "DIKWP-VITA-MESH",
+      "artifact_version": "1.0.0",
+      "timestamp": "2026-07-16T19:00:00Z",
+      "node_id": "steward-multisig",
+      "day_token": "demo-11-maintainer_release",
+      "count": 1,
+      "consent_scope": "signed",
+      "payload": {
+        "release": "v1.0.1"
+      },
+      "public_key": "+KxVxk1ynd1CwzgdVMpsT6ZC692mkHJv21uSYn8KJ0U=",
+      "signature": "oEgrl/Ia9awzw32X/IVf99d21CFY1+24Q5yZq/YE6+JQfVMUiWXehaedx65dY4rln8SXzopdX/LRPqZsBIMpAw==",
+      "event_id": "2601423ebfb6560ff2d0b83278d084ad3f11ba1f3e67d9509d4fa6366618cf63"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "DIKWP-VITA-MESH",
+  "generated_at": "2026-07-16T00:00:00Z",
+  "status": "reference-seed",
+  "vitality_score": 12.0,
+  "life_stage": "L0 Seed / 种子",
+  "dimensions": {
+    "energy": 0.12,
+    "information": 0.1,
+    "reproduction": 0.08,
+    "continuity": 0.15,
+    "governance": 0.58,
+    "diversity": 0.08,
+    "adaptation": 0.08,
+    "trust": 0.1
+  },
+  "notice": "This seed file is replaced by the runtime or scheduled GitHub workflow after deployment.",
+  "event_count": 0,
+  "verified_event_count": 0,
+  "unique_nodes": 0,
+  "merkle_root": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "event_type_counts": {},
+  "residual_risks": [
+    "该文件是部署前种子状态，尚无公共事件。",
+    "只有明示同意、公开聚合或可验证贡献才可进入公共生命账本。"
+  ]
+}

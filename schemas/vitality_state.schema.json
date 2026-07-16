@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VitalityState",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "event_count",
+    "dimensions",
+    "vitality_score",
+    "life_stage",
+    "merkle_root"
+  ],
+  "properties": {
+    "artifact_id": {
+      "type": "string"
+    },
+    "event_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "verified_event_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "unique_nodes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "merkle_root": {
+      "type": "string"
+    },
+    "vitality_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "life_stage": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "event_type_counts": {
+      "type": "object"
+    },
+    "residual_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

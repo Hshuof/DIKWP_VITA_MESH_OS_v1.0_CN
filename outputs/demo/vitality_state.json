@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "DIKWP-VITA-MESH",
+  "generated_at": "2026-07-16T23:00:00Z",
+  "event_count": 12,
+  "verified_event_count": 4,
+  "unique_nodes": 11,
+  "merkle_root": "3400d24d0061c796e13bafe0ca79eb6eec294d424ecde1a6ec4a321a5fc521ae",
+  "dimensions": {
+    "energy": 0.0196,
+    "information": 0.0774,
+    "reproduction": 0.1406,
+    "continuity": 0.2769,
+    "governance": 0.6344,
+    "diversity": 0.3279,
+    "adaptation": 0.1794,
+    "trust": 0.1387
+  },
+  "vitality_score": 8.09,
+  "life_stage": "L0 Seed / 种子",
+  "event_type_counts": {
+    "page_access": 120,
+    "release_download": 42,
+    "clone": 12,
+    "run_proof": 2,
+    "feedback": 3,
+    "contradiction": 1,
+    "mirror_heartbeat": 2,
+    "pr_merged": 2,
+    "citation": 1,
+    "maintainer_release": 1
+  },
+  "residual_risks": [
+    "可验证复现、引用或签名事件不足；生命力可能被表面访问量放大。",
+    "节点和使用场景过于集中；尚未形成真正分布式谱系。",
+    "发布、维护者与镜像心跳不足；存在单点失活风险。",
+    "访问量显著高于复现量；需要把注意力转化为运行证据。"
+  ]
+}

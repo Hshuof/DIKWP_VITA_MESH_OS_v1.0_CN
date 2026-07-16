@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvolutionProposal",
+  "type": "object",
+  "required": [
+    "proposal_id",
+    "priority",
+    "target_dimension",
+    "title",
+    "actions",
+    "success_evidence",
+    "kill_conditions"
+  ],
+  "properties": {
+    "proposal_id": {
+      "type": "string"
+    },
+    "priority": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "target_dimension": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "success_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "kill_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

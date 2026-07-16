@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "name": "DIKWP-VITA Mesh OS",
+    "chinese_name": "段玉聪个性化开源数字生命与分布式生命力增强系统",
+    "version": "1.0.0",
+    "artifact_id": "DIKWP-VITA-MESH",
+    "validation_date": "2026-07-16",
+    "purpose": "将访问、下载、运行、复现、反例、修复、引用、镜像和非创始维护编译为可审计、可联邦的开放数字生命力。"
+  },
+  "delivery": {
+    "word_specification": "docs/段玉聪_DIKWP-VITA_MESH_OS_个性化开源数字生命与分布式生命力增强系统_v1.0_CN_最终版.docx",
+    "offline_dashboard": "prototype/index.html",
+    "python_package": "src/dikwp_vita/",
+    "schemas": 5,
+    "architecture_diagrams": 3,
+    "github_workflows": 3,
+    "docker_files": [
+      "Dockerfile",
+      "docker-compose.yml",
+      ".env.example",
+      "deployment/nginx.conf"
+    ],
+    "deployment_runbooks": [
+      "deployment/DEPLOYMENT_RUNBOOK_CN.md",
+      "deployment/MINIMAL_ACCESS_ADAPTER_CN.md"
+    ]
+  },
+  "document_qa": {
+    "rendered_pages": 25,
+    "all_pages_visually_reviewed": true,
+    "paragraphs": 274,
+    "tables": 28,
+    "embedded_images": 3,
+    "extracted_characters": 27883,
+    "chinese_characters": 14580,
+    "comments_present": false,
+    "tracked_changes_present": false,
+    "accessibility": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "sha256": "2bc405ab63cc390544a9f1c9ea335773fc2307656c405be252cb5a108c987deb"
+  },
+  "source_qa": {
+    "python_files": 21,
+    "python_lines": 1494,
+    "pytest": {
+      "passed": 13,
+      "failed": 0
+    },
+    "python_compileall": "passed",
+    "clean_editable_install": "passed in isolated venv with system site packages",
+    "json_schema_files": 5,
+    "schema_validation": "passed for sample pulse, public seed state, demo state, proposal items and federation bundle",
+    "frontend_html_structure": "passed",
+    "frontend_inline_javascript_syntax": "passed",
+    "service_worker_javascript_syntax": "passed",
+    "collector_end_to_end": "health, pulse and state passed",
+    "collector_access_log_default": "off and verified",
+    "minimal_access_adapter": "incremental offset scan and packet generation passed",
+    "compose_yaml": "parsed",
+    "nginx_minimal_config": "syntax test passed",
+    "docker_image_build": "not executed because no Docker/Podman daemon was available in the validation environment"
+  },
+  "deterministic_demo": {
+    "two_independent_runs_byte_identical": true,
+    "event_records": 12,
+    "verified_event_records": 4,
+    "unique_nodes": 11,
+    "aggregate_event_type_counts": {
+      "page_access": 120,
+      "release_download": 42,
+      "clone": 12,
+      "run_proof": 2,
+      "feedback": 3,
+      "contradiction": 1,
+      "mirror_heartbeat": 2,
+      "pr_merged": 2,
+      "citation": 1,
+      "maintainer_release": 1
+    },
+    "vitality_score": 8.09,
+    "life_stage": "L0 Seed / 种子",
+    "merkle_root": "3400d24d0061c796e13bafe0ca79eb6eec294d424ecde1a6ec4a321a5fc521ae",
+    "evolution_proposals": 5,
+    "output_sha256": {
+      "vitality_state.json": "9f98a683aa5bda9ac61c09ac31a0cfa977ef8412ae80e457c04600973e08597b",
+      "evolution_proposals.json": "0099f513e0b9b6b40ca2a4b8fa5ae38b678da335628f9834efc3157c58558fce",
+      "federation_bundle.json": "8e88a5ad5572364b1f3548244d7fb1b18d5efb3700390f739cb09d40c945399f"
+    }
+  },
+  "privacy_and_integrity_controls": [
+    "Opening the dashboard always increases local vitality without a network request.",
+    "Public browser pulses require explicit opt-in and use daily-rotating anonymous node_id and day_token values.",
+    "The reference collector does not intentionally persist IP, cookie, user-agent, name, email or precise location.",
+    "HTTP access logs are disabled by default in the reference CLI.",
+    "Optional mirror aggregation uses timestamp, method, URI and status only; raw logs are not uploaded.",
+    "Public ledger payloads are limited to 16 KiB and low-cost anonymous events are daily capped.",
+    "Signed packets use Ed25519; event history is deduplicated by event_id and checkpointed with a Merkle root.",
+    "EvolutionProposal objects cannot self-approve or automatically change high-impact governance rules."
+  ],
+  "known_boundaries": [
+    "An off-platform access or download cannot be observed unless the host exposes aggregate metrics or submits a receipt.",
+    "Page views, downloads, stars and the vitality score are not evidence of scientific truth, human value or phenomenal consciousness.",
+    "A public deployment still needs HTTPS, proxy-level rate limits, backups, key management and named accountable stewards.",
+    "Repository author, organization, license coverage, collector operator and public privacy notice must be confirmed before release.",
+    "The package is a reference implementation; it has not been deployed to or endorsed by Yucong Duan, Hainan University, WAAC or WCAC as part of this validation."
+  ],
+  "release_package": {
+    "staged_file_count_before_checksum": 67,
+    "staged_uncompressed_bytes_before_checksum": 1865188,
+    "internal_render_pngs_included": false,
+    "python_cache_files_included": false,
+    "source_egg_info_included": false
+  }
+}

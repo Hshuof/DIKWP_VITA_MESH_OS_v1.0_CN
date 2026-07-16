@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "event_type": "run_proof",
+  "artifact_id": "DIKWP-VITA-MESH",
+  "artifact_version": "1.0.0",
+  "timestamp": "2026-07-16T08:00:00Z",
+  "node_id": "example-node",
+  "day_token": "example-2026-07-16-run",
+  "count": 1,
+  "consent_scope": "anonymous",
+  "payload": {
+    "algorithm": "sha256-iterative-reference-v1",
+    "rounds": 4096,
+    "proof_valid": true
+  },
+  "public_key": null,
+  "signature": null,
+  "event_id": null
+}

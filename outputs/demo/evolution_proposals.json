@@ -1,0 +1,122 @@
+[
+  {
+    "proposal_id": "EVO-10770D233F33BE7D",
+    "generated_at": "2026-07-16T23:00:00Z",
+    "priority": "critical",
+    "target_dimension": "energy",
+    "title": "建立维护资源和算力补给池",
+    "rationale": "当前 energy 维度为 0.02，低于公共数字生命建议阈值 0.62。",
+    "actions": [
+      "把赞助、算力、维护小时建成 ResourceContribution",
+      "为关键 Issue 设置资源预算",
+      "季度公开资源流向"
+    ],
+    "success_evidence": [
+      "维护预算覆盖 6 个月",
+      "至少 3 类资源来源",
+      "不存在单一资助方控制"
+    ],
+    "kill_conditions": [
+      "无法证明改动带来净改善",
+      "引入隐蔽追踪或不可撤销权限",
+      "破坏既有复现结果"
+    ],
+    "status": "proposed"
+  },
+  {
+    "proposal_id": "EVO-AE879BA5E14CF294",
+    "generated_at": "2026-07-16T23:00:00Z",
+    "priority": "critical",
+    "target_dimension": "information",
+    "title": "把访问转化为语义营养",
+    "rationale": "当前 information 维度为 0.08，低于公共数字生命建议阈值 0.62。",
+    "actions": [
+      "在首页增加一分钟微贡献：使用场景、错误或反例三选一",
+      "发布结构化 ClaimGene / Contradiction 表单",
+      "每月公开吸收与拒绝的反馈差分"
+    ],
+    "success_evidence": [
+      "至少 20 条去重反馈",
+      "至少 5 条进入 Issue 或文档修订",
+      "公布未采纳理由"
+    ],
+    "kill_conditions": [
+      "无法证明改动带来净改善",
+      "引入隐蔽追踪或不可撤销权限",
+      "破坏既有复现结果"
+    ],
+    "status": "proposed"
+  },
+  {
+    "proposal_id": "EVO-8EDA6B2A5D73750F",
+    "generated_at": "2026-07-16T23:00:00Z",
+    "priority": "critical",
+    "target_dimension": "trust",
+    "title": "强化证据与防刷机制",
+    "rationale": "当前 trust 维度为 0.14，低于公共数字生命建议阈值 0.62。",
+    "actions": [
+      "要求高权重事件签名或 proof",
+      "公开 Merkle root",
+      "设置反刷审计和异常事件隔离"
+    ],
+    "success_evidence": [
+      "签名/验证事件占比提升",
+      "第三方复核通过",
+      "异常事件不进入主分数"
+    ],
+    "kill_conditions": [
+      "无法证明改动带来净改善",
+      "引入隐蔽追踪或不可撤销权限",
+      "破坏既有复现结果"
+    ],
+    "status": "proposed"
+  },
+  {
+    "proposal_id": "EVO-CD66B81F166DBEB4",
+    "generated_at": "2026-07-16T23:00:00Z",
+    "priority": "critical",
+    "target_dimension": "reproduction",
+    "title": "启动一键复现与环境多样性挑战",
+    "rationale": "当前 reproduction 维度为 0.14，低于公共数字生命建议阈值 0.62。",
+    "actions": [
+      "提供 `dikwp-vita run-proof`",
+      "冻结基准哈希与预期结果",
+      "邀请三种操作系统和两个独立团队运行"
+    ],
+    "success_evidence": [
+      "独立 run-proof >= 10",
+      "至少 3 种环境",
+      "失败结果被保留"
+    ],
+    "kill_conditions": [
+      "无法证明改动带来净改善",
+      "引入隐蔽追踪或不可撤销权限",
+      "破坏既有复现结果"
+    ],
+    "status": "proposed"
+  },
+  {
+    "proposal_id": "EVO-ABD20B930A918FFB",
+    "generated_at": "2026-07-16T23:00:00Z",
+    "priority": "critical",
+    "target_dimension": "adaptation",
+    "title": "把反馈闭环为版本化进化",
+    "rationale": "当前 adaptation 维度为 0.18，低于公共数字生命建议阈值 0.62。",
+    "actions": [
+      "每季度生成 EvolutionProposal",
+      "所有规则变更通过 PR 与差分测试",
+      "保留被否决提案"
+    ],
+    "success_evidence": [
+      "至少 2 个提案被验证",
+      "发布变更前后指标",
+      "可回滚"
+    ],
+    "kill_conditions": [
+      "无法证明改动带来净改善",
+      "引入隐蔽追踪或不可撤销权限",
+      "破坏既有复现结果"
+    ],
+    "status": "proposed"
+  }
+]

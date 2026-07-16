@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FederationBundle",
+  "type": "object",
+  "required": [
+    "source_node",
+    "generated_at",
+    "merkle_root",
+    "events"
+  ],
+  "properties": {
+    "source_node": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "merkle_root": {
+      "type": "string"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "pulse_packet.schema.json"
+      }
+    }
+  }
+}

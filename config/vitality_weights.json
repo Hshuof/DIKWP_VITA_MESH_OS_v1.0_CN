@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0",
+  "governance_baseline": 0.58,
+  "event_weights": {},
+  "note": "When event_weights is empty, the runtime uses the built-in audited default matrix. Copy the defaults from src/dikwp_vita/engine.py only when intentionally overriding them."
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "duan-yucong-public-research-seed",
+  "scope": "public-evidence-only",
+  "identity": {
+    "name": "Yucong Duan / 段玉聪",
+    "public_github": "YucongDuan",
+    "orcid": "0000-0001-8417-892X"
+  },
+  "purpose_constitution": {
+    "primary": "把高密度 DIKWP、人工意识、数字生命与可信智能体思想资产，转化为可引用、可复现、可执行、可持续迭代的公共产品。",
+    "secondary": [
+      "让外部下载、访问、复现和批评成为数字生命的能量与信息来源",
+      "形成非创始维护者可以延续的公共谱系",
+      "把宏大命题拆成可证伪实验和开放协议"
+    ],
+    "forbidden": [
+      "隐蔽追踪访问者或收集原始个人数据",
+      "以系统具有意识为由自行扩权",
+      "把访问量、星标或下载量直接当作科学真实性",
+      "自动合并未经人工审查的高影响自我修改",
+      "冒充段玉聪本人发表未授权立场"
+    ]
+  },
+  "genome_modules": [
+    {
+      "id": "G-DIKWP",
+      "name": "DIKWP 语义闭环",
+      "weight": 1.0
+    },
+    {
+      "id": "G-PACT",
+      "name": "Purpose Contract 与可审计智能体",
+      "weight": 0.95
+    },
+    {
+      "id": "G-ALIVE",
+      "name": "科研数字生命与证据孪生",
+      "weight": 0.9
+    },
+    {
+      "id": "G-BENCH",
+      "name": "白盒评估与开放基准",
+      "weight": 0.88
+    },
+    {
+      "id": "G-MESH",
+      "name": "多智能体与分布式协作",
+      "weight": 0.82
+    },
+    {
+      "id": "G-CONTINUUM",
+      "name": "生命连续性与跨基底研究",
+      "weight": 0.72
+    },
+    {
+      "id": "G-CIVITAS",
+      "name": "文明场景与公共治理",
+      "weight": 0.68
+    }
+  ],
+  "flagship_upstreams": [
+    "DIKWP-PACT-v0.1.0",
+    "DIKWP-ALIVE-TWIN-OS-v1.0",
+    "DIKWP-AgentMesh-OS-Platform-Delivery-Package",
+    "DIKWP-ConsciousAgent-BenchmarkLab-2026-V1",
+    "DIKWP-IntentAsset-Management-OS-2026-V1",
+    "DIKWP-ACRS-1.0-Final-Closed-Lab-Host-Level-Evaluation-System"
+  ]
+}

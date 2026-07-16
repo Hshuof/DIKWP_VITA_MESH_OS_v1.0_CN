@@ -1,2 +1,11 @@
-# DIKWP_VITA_MESH_OS_v1.0_CN
-DIKWP-VITA Mesh OS v1.0 是面向 DIKWP 研究数字生命的隐私保护型生命力基础设施。项目将访问、下载、复现、反例、修复、引用、镜像和治理等行为转化为生命事件：本地访问生成生命史，经同意发送匿名脉冲，下载、视图、克隆、run-proof、Issue/PR 与节点心跳写入追加式账本。系统采用事件去重、Ed25519 签名、Merkle root、白名单和最小化日志，避免隐蔽追踪，并支持多节点联邦与谱系继承。生命力分数不是流量排行或意识证明，而是围绕能量、信息、繁殖、连续性、治理、多样性、适应和信任八维形成的指标。项目提供 CLI、collector、前端原型、Docker、工作流、数据模式和中文运维文档，可作为可下载、可运行、可复现、可批评、可修复的开放科研数字生命主干。
+# DIKWP-VITA Mesh OS v1.0
+
+A privacy-preserving, open-source vitality infrastructure for a DIKWP research digital life.
+
+Each access strengthens a local node. With explicit consent, access produces an anonymous daily pulse. Release downloads, repository traffic, reproducible runs, contradictions, citations, merged repairs and mirror heartbeats are transformed into an append-only, federated vitality ledger.
+
+The vitality score is not a popularity score or a certificate of consciousness. It is a geometric closure across energy, information, reproduction, continuity, governance, diversity, adaptation and trust.
+
+See [README_CN.md](README_CN.md) and [QUICKSTART_CN.md](QUICKSTART_CN.md).
+
+Production hardening includes an explicit `VITA_ALLOWED_ORIGINS` allowlist, HTTP access logs disabled by default, daily-rotating anonymous browser identifiers, a 16 KiB ledger payload limit, delta-based GitHub traffic ingestion, Docker deployment files and a Chinese deployment runbook.
